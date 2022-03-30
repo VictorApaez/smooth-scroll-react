@@ -16,6 +16,7 @@ export const SidebarContainer = styled.div`
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in-out;
+  opacity: 0;
 `;
 export const Icon = styled.div`
   position: absolute;
