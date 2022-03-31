@@ -9,11 +9,11 @@ import {
   SidebarBtnRoute,
 } from "./Sidebar";
 
-function Sidebar() {
+function Sidebar({ isOpen, toggle }) {
   return (
     <>
-      <SidebarContainer>
-        <Icon>
+      <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
         <SidebarMenu>

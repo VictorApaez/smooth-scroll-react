@@ -6,7 +6,6 @@ import { Link as LinkScroll } from "react-scroll";
 export const SidebarContainer = styled.div`
   background-color: black;
   position: absolute;
-  top: 0;
   right: 0;
   width: 100%;
   z-index: 999;
@@ -16,7 +15,8 @@ export const SidebarContainer = styled.div`
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in-out;
-  opacity: 0;
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 export const Icon = styled.div`
   position: absolute;
