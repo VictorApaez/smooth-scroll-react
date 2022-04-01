@@ -1,5 +1,4 @@
 import React from "react";
-import { NavMenu } from "../Header";
 import {
   SidebarContainer,
   Icon,

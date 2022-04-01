@@ -4,7 +4,8 @@ import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = styled.nav`
   display: flex;
-  height: 80px;
+  background-color: white;
+  height: 8vh;
   justify-content: center;
   /* align-items: center; */
   position: sticky;
@@ -16,7 +17,7 @@ export const NavContainer = styled.div`
   max-width: 1100px;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 100%;
   margin: 0px 20px;
 `;
 export const NavLogo = styled(LinkRouter)`
@@ -29,6 +30,7 @@ export const NavLogo = styled(LinkRouter)`
 `;
 export const MobileIcon = styled.div`
   display: none;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;

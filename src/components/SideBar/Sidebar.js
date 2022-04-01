@@ -22,6 +22,7 @@ export const Icon = styled.div`
   position: absolute;
   top: 1rem;
   right: 1rem;
+  cursor: pointer;
 `;
 export const CloseIcon = styled(FaTimes)`
   font-size: 2rem;
