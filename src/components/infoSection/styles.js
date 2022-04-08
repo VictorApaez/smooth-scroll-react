@@ -1,34 +1,43 @@
-import react from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InfoSectionContainer = styled.div`
   height: 80vh;
   padding: 30px;
   display: grid;
-  color: white;
-  background-color: rgb(0, 0, 0);
-  grid-auto-columns: minmax(auto, 1fr);
+  color: ${({ lightText }) => (lightText ? 'black' : 'white')};
+  background-color: ${({ lightBg }) => (lightBg ? 'white' : 'black')};
+  grid-auto-columns: minmax(1fr, 1fr);
   align-items: center;
-  grid-template-areas: "a b";
+
+  grid-template-areas: ${({ imgStart }) => (imgStart ? '"a b"' : '"b a"')};
   @media screen and (max-width: 768px) {
-    grid-template-areas:
-      "a"
-      "b";
+    grid-template-areas: 'a' 'b';
   }
 `;
-
+export const ImgConatiner = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 export const Img = styled.img`
   grid-area: a;
   height: 180px;
 `;
 export const ColumnInfo = styled.div`
   grid-area: b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
 `;
 export const Title = styled.h1`
   font-size: 3rem;
   text-transform: uppercase;
+  margin: 0;
 `;
-export const Description = styled.p``;
+export const Description = styled.p`
+  line-height: 1.5rem;
+`;
+
 export const Button = styled.div`
   display: inline-block;
   border-radius: 50px;

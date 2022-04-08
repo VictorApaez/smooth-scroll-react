@@ -1,26 +1,30 @@
-import React from "react";
+import React from 'react';
 
 import {
   InfoSectionContainer,
+  ImgConatiner,
   Img,
   ColumnInfo,
   Title,
   Description,
   Button,
-} from "./styles";
+} from './styles';
 
-function InfoSection() {
+function InfoSection({ title, paragraph, imgStart, img, lightBg, lightText }) {
   return (
     <>
-      <InfoSectionContainer>
-        <Img src={require("../../images/user.svg").default} />
+      <InfoSectionContainer
+        imgStart={imgStart}
+        lightBg={lightBg}
+        lightText={lightText}
+      >
+        <ImgConatiner>
+          <Img src={img} />
+        </ImgConatiner>
+
         <ColumnInfo>
-          <Title>tellus vitae neque faucibus</Title>
-          <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            in pellentesque lacus, eget rutrum diam. Etiam ornare tellus vitae
-            neque faucibus consectetur
-          </Description>
+          <Title>{title}</Title>
+          <Description>{paragraph}</Description>
           <Button>Click me</Button>
         </ColumnInfo>
       </InfoSectionContainer>
